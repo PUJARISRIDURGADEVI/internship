@@ -1,0 +1,3 @@
+created account in GitHub
+
+trying various git commands
