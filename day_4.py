@@ -7,14 +7,14 @@
 #     stars=" *" * (1*i - 1)
 #     print(spaces + stars)
 
-# rows=int(input("enter the number of rows: "))
-# for i in range(6,0,-1):
-#     spaces= (rows - i)*" "
-#     stars=" * " * (1*i)
-#     print(spaces + stars)
+rows=int(input("enter the number of rows: "))
+for i in range(rows,0,-1):
+    spaces= (rows - i)*" "
+    stars=" * " * (1*i)
+    print(spaces + stars)
+    
 
-
-
+ #5
 # 
 # secret=5
 # guess=0
@@ -114,15 +114,8 @@
 #     alphabets+=1
 #     print(spaces+letters)
 
-# rows=int(input("enter the number of rows: "))
-# num=1
-# for i in range(1,rows+1):
-#     print(" " * (rows-i),end='')
-#     for j in range(i):
-#         if num<=10:
-#             print(f" {num} ",end='')
-#             num+=1
-#     print()
+# 
+
 
 
 # rows=int(input("enter the number: "))
@@ -172,14 +165,14 @@
 #     print("not armstrong")
 
 
-# secret_number=5
-# guess=0
-# while guess!=secret_number:
-#     guess=int(input("enter the number between 1 to 10: "))
-# if secret_number==guess:
-#     print("right")
-# else:
-#     print("wrong")
+secret_number=5
+guess=0
+while guess!=secret_number:
+    guess=int(input("enter the number between 1 to 10: "))
+if secret_number==guess:
+    print("right")
+else:
+    print("wrong")
 
 
 # num=5
@@ -194,9 +187,16 @@
 # else:
 #     print("your atempts are completed")
 
-n=int(input("enter the number: "))
-for i in range(2,n+1,1):
-    if i%2==0:
-        print("not prime")
-    else:
-        print("prime")
+# n=int(input("enter the number: "))
+# for i in range(2,n+1):
+#     for j in range(i)
+#     if i%2==0:
+#         print("not prime")
+#     else:
+#         print("prime")
+
+
+
+# for i in range(1,4):
+#   i=" ***" 
+#   print(i)
