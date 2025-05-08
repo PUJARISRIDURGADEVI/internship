@@ -1,43 +1,44 @@
-# def student_gradebook():
-#     limit=int(input("enter the no.of students: "))
-#     for i in range(limit):
-#         student_data={}
-#         student_name=[]
-#         student_rollno=[]
-#         subject_wisemarks={}
-#         name=input("enter the name of the student: ")
-#         rollno=int(input("enter the roll no of the student: "))
-#         student_name.append(name)
-#         student_rollno.append(rollno)
-#         for i in range(3):
-#             subject=input("enter the subject name: ")
-#             marks=int(input("enter the marks of the student: "))
-#             subject_wisemarks[subject]=marks 
-#         student_data['student_name']=student_name
-#         student_data['student_rollno']=student_rollno
-#         student_data['subject_wisemarks']= subject_wisemarks 
-#         # student_data['subject_wisemarks'] = " / ".join(f"{subject}: {marks}" for subject, marks in subject_wisemarks.items())
-#         student_data['total_marks']=sum(subject_wisemarks.values())
-#         student_data['average_marks']=sum(subject_wisemarks.values())/len(subject_wisemarks)
-#         if student_data['total_marks'] > 300:
-#             grade='A'
-#         elif student_data['total_marks'] > 250:
-#             grade='B'
-#         elif student_data['total_marks'] > 150:
-#             grade='C'
-#         else:
-#             grade='fail'
-#         student_data['grade']=grade
-#         print(student_data)
-#     sort=dict(sorted(student_data.items()))
-#     print(sort)
-#     name=input("Enter the name to search:")
-#     if name in student_data:
-#         search=student_data.get(student_name)
-#         print(search)
-#     else:
-#         print(f'{student_name} not found')
-# student_gradebook()
+def student_gradebook():
+    student=[]
+    limit=int(input("enter the no.of students: "))
+    for i in range(limit):
+        student_data={}
+        subject_wisemarks={}
+        name=input("enter the name of the student: ")
+        rollno=int(input("enter the roll no of the student: "))
+        for i in range(3):
+            subject=input("enter the subject name: ")
+            marks=int(input("enter the marks of the student: "))
+            subject_wisemarks[subject]=marks 
+        student_data['student_name']=name
+        student_data['student_rollno']=rollno
+        student_data['subject_wisemarks']= subject_wisemarks 
+        # student_data['subject_wisemarks'] = " / ".join(f"{subject}: {marks}" for subject, marks in subject_wisemarks.items())
+        student_data['total_marks']=sum(subject_wisemarks.values())
+        student_data['average_marks']=sum(subject_wisemarks.values())/len(subject_wisemarks)
+        if student_data['total_marks'] > 300:
+            grade='A'
+        elif student_data['total_marks'] > 250:
+            grade='B'
+        elif student_data['total_marks'] > 150:
+            grade='C'
+        else:
+            grade='fail'
+        student_data['grade']=grade
+        print(student_data)
+    name=input("enter name to sort: " )
+    sort=dict(sorted(student_data.items()))
+    print(sort)
+    search_name = input("\nEnter the name to search: ")
+    found=False
+    for name in student:
+        if name['student_name'] == search_name:  
+            print("Student found:", student)
+            found=True
+        else:
+            print(f"{search_name} not found in the records.")
+   
+student_gradebook()
     
 
 
@@ -80,32 +81,191 @@
 #             break
 # smart_grocery()
 
-def game():
-    player=input("enter the character of the player: ")
-    choice=input("1.room 2.room 3.room 4.room")
-    health_coins=10
-    items=[]
-    explore_rooms()
-def explore_rooms():
-    if choice==1:
-        action=input("here you have to fight wiṭh monster(fight/run)")
-        if fight:
-            fight=("fight with the monster with the help of sword/shield")
-            if fight==sword/shield:
-                print("you win  and having more coins and move to next room")
-                health_coins+=2
-            else:
-                health_coins-=2
-                print("you lose the coins")
-        elif run:
-            print("you run away from the monster and enter into next room")
+# def play_game():
+#     player=input("enter the character of the player: ")
+#     choice=int(input("1.room 2.room 3.room: "))
+#     health_coins=10
+#     items=[]
+#     tokens=set()
 
-    if choice==2:
-        items=input("here pick up the items")
-        for items in range(0,4):
-            if items==4:
-                print("")
+#     print("Current health coins:", health_coins)
+#     if health_coins >= 12:
+#         print("You have enough health coins to win the game!")
+#         print("You found the treasure! You win!")
+#         break
+#     elif health_coins <= 0:
+#         print("You've run out of health coins. Game Over!")
+#         break
+
+#     explore_rooms(choice, health_coins, items, tokens)
+# def explore_rooms(choice, health_coins, items, tokens):
+#     if choice==1:
+#         action=input("here you have to fight wiṭh monster(fight/run)")
+#         if action=="fight":
+#             fight=("fight with the monster with the help of sword/shield")
+#             if fight in sword:
+#                 print("you win  and having more coins and move to next room")
+#                 health_coins+=2
+#             else:
+#                 health_coins-=2
+#                 print("you lose the coins")
+#         elif run:
+#             print("you run away from the monster and enter into next room")
+
+#     elif choice==2:
+#         item=input("here pick up the items")
+#         items.append(item)
+#         if len(items) == 4:
+#             print("You collected all items! You gain more coins and move to the next room.")
+#             health_coins += 2
+#         else:
+#             health_coins-=2
+#             print("you lose the health coins. Move to next room")
         
+#     elif choice==3: 
+#         answer = input("Solve the riddle: What has to be broken before you can use it? ")
+#         if answer.lower() == "egg":
+#             print("Correct! You gain the token.")
+#             player["tokens"].add("token")
+#             health_coins += 2
+#         else:
+#             print("Wrong answer!")
+#             health_coins -= 2
+#             print("You lose the health coins. Move to next room.")
+#     return health_coins
+
+#     print("Game Over!")
+
+
+# play_game()
+        
+
+
+# def play_game():
+#     player = input("Enter the character of the player: ")
+#     choice = int(input("1. room  2. room  3. room: "))
+#     health_coins = 10
+#     items = []
+#     tokens = set()
+#      print("Current health coins:", health_coins)
+#         if health_coins >= 10:
+#             print("You have enough health coins to win the game!")
+#             print("You found the treasure! You win!")
+#             return
+#         elif health_coins <= 0:
+#             print("You've run out of health coins. Game Over!")
+#             return
+
+#     print("Game Over!")
+
+#     explore_rooms(choice, health_coins, items, tokens)
+
+# def explore_rooms(choice, health_coins, items, tokens):
+#     if choice == 1:
+#         action = input("Here you have to fight with monster (fight/run): ")
+#         if action == "fight":
+#             sword = ("Pick up the sword or shield: ")
+#             fight_with = input("Fight with the monster using sword or shield: ")
+#             if fight_with == sword:
+#                 print("You win and gain more coins and move to next room.")
+#                 health_coins += 2
+#             else:
+#                 health_coins -= 2
+#                 print("You lose some coins.")
+#         elif action == "run":
+#             print("You run away from the monster and enter into the next room.")
+#         else:
+#             print("Invalid action.")
+
+#     elif choice == 2:
+#         item = input("Here, pick up the item: ")
+#         items.append(item)
+#         for items in range(4):
+#             if len(items) == 4:
+#                 print("You collected all items! You gain more coins and move to the next room.")
+#                 health_coins += 2
+#             else:
+#                 health_coins -= 2
+#                 print("You lose health coins. Move to next room.")
+
+#     elif choice == 3: 
+#         answer = input("Solve the riddle: What has to be broken before you can use it? ")
+#         if answer == "egg":
+#             print("Correct! You gain the token.")
+#             tokens.add("token")
+#             health_coins += 2
+#         else:
+#             print("Wrong answer!")
+#             health_coins -= 2
+#             print("You lose health coins. Move to next room.")
+#     else:
+#         print("Invalid choice. Please choose a valid room.")
+#         return
+
+#     print("Health coins:", health_coins)
+#     return health_coins
+# play_game()
+
+
+
+# def play_game():
+#     player = input("Enter the character of the player: ")
+#     choice = int(input("1. room  2. room  3. room: "))
+#     health_coins = 10
+#     items = []
+#     tokens = set()
+#     explore_rooms(choice, health_coins, items, tokens)
+
+# def explore_rooms(choice, health_coins, items, tokens):
+#     if choice == 1:
+#         action = input("Here you have to fight with monster (fight/run): ")
+#         if action == "fight":
+#             sword = input("Pick up the sword or shield: ")
+#             fight_with = input("Fight with the monster using sword or shield: ")
+#             if fight_with == sword:
+#                 print("You win and gain more coins and move to next room.")
+#                 health_coins += 2
+#             else:
+#                 health_coins -= 2
+#                 print("You lose some coins.")
+#         elif action == "run":
+#             print("You run away from the monster and enter into the next room.")
+#         else:
+#             print("Invalid action.")
+
+#     elif choice == 2:
+#         find_item= input("Here, pick up the item: ")
+#         if find_item=="silver":
+#             print("You collected all items! You gain more coins and move to the next room.")
+#             items.append("find_item")
+#             health_coins += 2
+#         else:
+#             health_coins -= 2
+#             print("You lose health coins. Move to next room.")
+
+#     elif choice == 3: 
+#         answer = input("Solve the riddle: What has to be broken before you can use it? ")
+#         if answer == "egg":
+#             print("Correct! You gain the token.")
+#             tokens.add("token")
+#             health_coins += 2
+#         else:
+#             print("Wrong answer!")
+#             health_coins -= 2
+#             print("You lose health coins. Move to next room.")
+#     else:
+#         print("Invalid choice. Please choose a valid room.")
+#         return
+
+#     print("Health coins:", health_coins)
+#     if health_coins >= 10:
+#         print("You have enough health coins to win the game!")
+#         print("You found the Treasure! You win!")
+#     else:
+#         print("Game Over!")
+# play_game()
+
+
+def play_game():
+    player=input("enter the character name: ")
     
-game()
-        

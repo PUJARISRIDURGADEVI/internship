@@ -27,19 +27,19 @@
 #     print("the largest number is ",z)
 
 
-a=int(input("enter the number: "))
-b=int(input("enter the number: "))
-c=input("enter the operator:")
-if c=="+":
-    print("the sum of ",a+b)
-elif c=="-":    
-    print("the difference of ",a-b)
-elif c=="*":                    
-    print("the product of ",a*b)
-elif c=="/":
-    print("the division of ",a/b)
-else:
-    print("invalid operator")
+# a=int(input("enter the number: "))
+# b=int(input("enter the number: "))
+# c=input("enter the operator:")
+# if c=="+":
+#     print("the sum of ",a+b)
+# elif c=="-":    
+#     print("the difference of ",a-b)
+# elif c=="*":                    
+#     print("the product of ",a*b)
+# elif c=="/":
+#     print("the division of ",a/b)
+# else:
+#     print("invalid operator")
 
 # king=input("king enter into the (forest/lake): ")
 # if king=="forest":
