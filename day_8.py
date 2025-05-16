@@ -1,85 +1,86 @@
-def student_gradebook():
-    student=[]
-    limit=int(input("enter the no.of students: "))
-    for i in range(limit):
-        student_data={}
-        subject_wisemarks={}
-        name=input("enter the name of the student: ")
-        rollno=int(input("enter the roll no of the student: "))
-        for i in range(3):
-            subject=input("enter the subject name: ")
-            marks=int(input("enter the marks of the student: "))
-            subject_wisemarks[subject]=marks 
-        student_data['student_name']=name
-        student_data['student_rollno']=rollno
-        student_data['subject_wisemarks']= subject_wisemarks 
-        # student_data['subject_wisemarks'] = " / ".join(f"{subject}: {marks}" for subject, marks in subject_wisemarks.items())
-        student_data['total_marks']=sum(subject_wisemarks.values())
-        student_data['average_marks']=sum(subject_wisemarks.values())/len(subject_wisemarks)
-        if student_data['total_marks'] > 300:
-            grade='A'
-        elif student_data['total_marks'] > 250:
-            grade='B'
-        elif student_data['total_marks'] > 150:
-            grade='C'
-        else:
-            grade='fail'
-        student_data['grade']=grade
-        print(student_data)
-    name=input("enter name to sort: " )
-    sort=dict(sorted(student_data.items()))
-    print(sort)
-    search_name = input("\nEnter the name to search: ")
-    found=False
-    for name in student:
-        if name['student_name'] == search_name:  
-            print("Student found:", student)
-            found=True
-        else:
-            print(f"{search_name} not found in the records.")
+# def student_gradebook():
+#     student=[]
+#     limit=int(input("enter the no.of students: "))
+#     for i in range(limit):
+#         student_data={}
+#         subject_wisemarks={}
+#         name=input("enter the name of the student: ")
+#         rollno=int(input("enter the roll no of the student: "))
+#         for i in range(3):
+#             subject=input("enter the subject name: ")
+#             marks=int(input("enter the marks of the student: "))
+#             subject_wisemarks[subject]=marks 
+#         student_data['student_name']=name
+#         student_data['student_rollno']=rollno
+#         student_data['subject_wisemarks']= subject_wisemarks 
+#         # student_data['subject_wisemarks'] = " / ".join(f"{subject}: {marks}" for subject, marks in subject_wisemarks.items())
+#         student_data['total_marks']=sum(subject_wisemarks.values())
+#         student_data['average_marks']=sum(subject_wisemarks.values())/len(subject_wisemarks)
+#         if student_data['total_marks'] > 300:
+#             grade='A'
+#         elif student_data['total_marks'] > 250:
+#             grade='B'
+#         elif student_data['total_marks'] > 150:
+#             grade='C'
+#         else:
+#             grade='fail'
+#         student_data['grade']=grade
+#         print(student_data)
+#     name=input("enter name to sort: " )
+#     sort=dict(sorted(student_data.items()))
+#     print(sort)
+#     search_name = input("\nEnter the name to search: ")
+#     found=False
+#     for name in student:
+#         if name['student_name'] == search_name:  
+#             print("Student found:", student)
+#             found=True
+#         else:
+#             print(f"{search_name} not found in the records.")
    
-student_gradebook()
+# student_gradebook()
     
 
 
 
-# def smart_grocery():
-#     browser_items={}
-#     cart={}
-#     for i in range(2):
-#         items=input("enter the name of items: ")
-#         cost=int(input("enter cost of the items: "))
-#         browser_items[items]=(cost)
-#     while True:  
-#         choice=input("Welcome to Smart Grocery!  \n 1. View Store Items\n 2. Add to Cart\n 3. View Cart\n 4. Remove Item\n 5. Checkout\n 6. Exit: ")
-#         if choice=="1":
-#             print(browser_items)
-#         elif choice=="2":
-#             items=input("enter add item to cart:")
-#             if items in browser_items:
-#                 quantity=int(input("enter quantity of the item: "))
-#                 for i in range(quantity):
-#                     cart[items]=browser_items.get(items)
-#                     print(cart)
-#             else:
-#                 print(f"{items} not found")
-#         elif choice=="3":
-#                 print(cart)
-#         elif choice=="4":
-#             items=input("enter the item to remove from cart:")
-#             if items in cart:
-#                 cart[items]=cart.pop(items)
-#                 print(cart)
-#             else:
-#                 print(f"{items} not found in cart")
-#         elif choice=="5":
-#             browser_items[items]=sum(cart.values()) 
-#             print(f"your total bill is {browser_items[items]}")
-#             print("thank you for shopping")              
-#         elif choice=='6':
-#             print('exit')
-#             break
-# smart_grocery()
+def smart_grocery():
+    browser_items={}
+    cart={}
+    limit=int(input("enter the no of items: "))
+    for i in range(limit):
+        items=input("enter the name of items: ")
+        cost=int(input("enter cost of the items: "))
+        browser_items[items]=(cost)
+    while True:  
+        choice=input("Welcome to Smart Grocery!  \n 1. View Store Items\n 2. Add to Cart\n 3. View Cart\n 4. Remove Item\n 5. Checkout\n 6. Exit: ")
+        if choice=="1":
+            print(browser_items)
+        elif choice=="2":
+            items=input("enter add item to cart:")
+            if items in browser_items:
+                quantity=int(input("enter quantity of the item: "))
+                for i in range(quantity):
+                    cart[items]=browser_items.get(items)
+                    print(cart)
+            else:
+                print(f"{items} not found")
+        elif choice=="3":
+                print(cart)
+        elif choice=="4":
+            items=input("enter the item to remove from cart:")
+            if items in cart:
+                cart[items]=cart.pop(items)
+                print(cart)
+            else:
+                print(f"{items} not found in cart")
+        elif choice=="5":
+            browser_items[items]=sum(browser_items.values()) 
+            print(f"your total bill is {browser_items[items]}")
+            print("thank you for shopping")              
+        elif choice=='6':
+            print('exit')
+            break
+smart_grocery()
 
 # def play_game():
 #     player=input("enter the character of the player: ")
@@ -266,6 +267,6 @@ student_gradebook()
 # play_game()
 
 
-def play_game():
-    player=input("enter the character name: ")
+# def play_game():
+#     player=input("enter the character name: ")
     

@@ -93,7 +93,9 @@
 #     print("_", s)
 
 def day():
-    names=input("enter the names: ")
-    for i in range(0,10):
-        print("\U0001f600 \u2764\ufe0f happy aniversary \u2764\ufe0f")
+    names=input("enter their names: ")
+    for i in range(0,50):
+        print("\U0001f600 \u2764\ufe0f happy aniversary  \u2764\ufe0f")
 day()
+
+

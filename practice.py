@@ -53,4 +53,31 @@
 #     print(a + str(i), end="") # Combine spaces and the row number
 #   print()  
 
-#  
+def console_app():
+    stored_items={}
+    limit=int(input("enter the no of items: "))
+    try:
+        for i in range(limit):
+            items=[]
+            items_names=input("enter the item names: ")
+            items_price=float(input("enter the item price: "))
+            items_quantity=int(input("enter the quantity of the item: "))
+            items.append(items_price)
+            items.append(items_quantity)
+            stored_items[items_names]=items  
+    except ValueError:
+        print("negative quantity") 
+    print("\n view stored  items: ")
+    print(stored_items)
+    return make_purchase()
+def make_purchase():
+    items_names=input("enter a item name to purchase: ")
+    quantity_needed=int(input("purchase item quantity needed:"))
+    for items_names in stored_items:
+        if items_quantity>=quantity_needed:
+            print("purchase sucessfully!")
+        elif items_quantity<quantity_needed:
+            print("stock is not avaliable")
+        else:
+            print("item not found")
+console_app()
