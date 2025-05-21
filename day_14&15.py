@@ -190,9 +190,4 @@ def contact_manager():
     else:
         ph_no=input("enter the ph number: ")
         email=input("enter the email id: ") 
-        with open("contact.csv","r") as file:
-            reader=csv.reader(file)
-            for row in reader:
-                print(row)
-
 contact_manager()

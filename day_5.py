@@ -1,10 +1,10 @@
-# n=5
-# num=1
-# for i in range(5,0,-1):
-#     for j in range(1,i+1):
-#         print(num+"")
-#     num+=1
-# print()
+n=5
+num=1
+for i in range(5,0,-1):
+    for j in range(1,i+1):
+        print((num),end='')
+        num+=1
+    print()
 
 
 # list=["a","b","c","d"]
@@ -126,15 +126,15 @@
 
 
 
-stack=[]
-while True:
-    cmd=input("""enter a command\n a.add an item to stack\n d.delete an item from stack\n v.print all stack items\n q.quit the program\n:""")
-    if cmd=="a":
-        item=input("enter the item")
-        stack.append(item)
-    elif cmd=="d":
-        stack.pop()
-    elif cmd=="v":
-        print(stack)
-    else:
-        print("not a vaid command")
+# stack=[]
+# while True:
+#     cmd=input("""enter a command\n a.add an item to stack\n d.delete an item from stack\n v.print all stack items\n q.quit the program\n:""")
+#     if cmd=="a":
+#         item=input("enter the item")
+#         stack.append(item)
+#     elif cmd=="d":
+#         stack.pop()
+#     elif cmd=="v":
+#         print(stack)
+#     else:
+#         print("not a vaid command")

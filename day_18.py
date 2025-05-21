@@ -49,27 +49,38 @@
 # b.capacity_info()
 
 
-class person:
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
-    def display(self):
-        print(f"name:{self.name},age:{self.age}")
-class student(person):
-    def study(self):
-        super().display()
-class teacher(person):
-    def teach(self):
-        super().display()
-s=student("john",20)
-a=teacher("jane",30)
-s.study()
-a.teach()    
-
-# class employee:
-#     def __init__(self,name,salary):
+# class person:
+#     def __init__(self,name,age):
 #         self.name=name
-#         self.salary=salary
+#         self.age=age
 #     def display(self):
-#         print(f"name:{self.name},age:{self.salary}")
-# class manager(employee):
+#         print(f"name:{self.name},age:{self.age}")
+# class student(person):
+#     def study(self):
+#         super().display()
+# class teacher(person):
+#     def teach(self):
+#         super().display()
+# s=student("john",20)
+# a=teacher("jane",30)
+# s.study()
+# a.teach()    
+
+class employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+    def display(self):
+        print(f"name:{self.name},salary:{self.salary}")
+class manager(employee):
+    def calculate_salary(self):
+        super().display()
+class developer(employee):
+    def calculate_salary(self):
+        super().display()
+a=manager("sai",30000)
+b=developer("kiran",20000)
+a.calculate_salary()
+b.calculate_salary()
+
+

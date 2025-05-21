@@ -79,20 +79,47 @@
 # book.return_book()
 # book.display()
         
-class car:
-    def __init__(self,brand,model,price,available):
-        self.brand=brand
-        self.model=model
-        self.price=price
-        self.available=available
-    def sell(self):
-        name=input("enter the brand: ")
-        if name!= self.brand:
-            print("not available")
+# class car:
+#     def __init__(self,brand,model,price,available):
+#         self.brand=brand
+#         self.model=model
+#         self.price=price
+#         self.available=available
+#     def sell(self):
+#         name=input("enter the brand: ")
+#         if name!= self.brand:
+#             print("not available")
+#         else:
+#             print("available")
+#     def display(self):
+#         print(f"brand:{self.brand},model:{self.model},price:{self.price},available")
+# my_car=car("audi","Q3",44.99,"available")
+# my_car.sell()
+# my_car.display()
+
+
+class MovieShow():
+    def __init__(self,title,total_seats,booked_seats):
+        self.title=title
+        self.total_seats=total_seats
+        self.booked_seats=booked_seats
+    def booked_info(self):
+        n=input("enter the no of seats to book: ")
+        total_seats=input("enter the total seats: ")
+        booked_seats=n
+        if booked_seats<total_seats:
+            print("seats are not available")
         else:
-            print("available")
+            print("seats are available")
+    def cancel_seats(self):
+        cancel_seats=input("enter the no of seats to cancel: ")
+        if self.cancel_seats ==self.booked_seats:
+            print("seats are cancelled")
+        else:
+            print("you have not booked any seats")
     def display(self):
-        print(f"brand:{self.brand},model:{self.model},price:{self.price},available")
-my_car=car("audi","Q3",44.99,"available")
-my_car.sell()
-my_car.display()
+        print(f"title:{self.title},total_seats:{self.total_seats},booked_seats:{self.booked_seats}")
+A=MovieShow("movie",100,50)
+A.booked_info()
+A.cancel_seats()
+A.display()

@@ -7,11 +7,11 @@
 #     stars=" *" * (1*i - 1)
 #     print(spaces + stars)
 
-rows=int(input("enter the number of rows: "))
-for i in range(rows,0,-1):
-    spaces= (rows - i)*" "
-    stars=" * " * (1*i)
-    print(spaces + stars)
+# rows=int(input("enter the number of rows: "))
+# for i in range(rows,0,-1):
+#     spaces= (rows - i)*" "
+#     stars=" * " * (1*i)
+#     print(spaces + stars)
     
 
  #5
@@ -50,6 +50,8 @@ for i in range(rows,0,-1):
 
 
 
+
+
 # for i in range(1,11,1):
 #     print(i)
 
@@ -59,10 +61,10 @@ for i in range(rows,0,-1):
 #    i+=1
 
 
-# n=int(input("enter the number: "))
+# my_list=[1,2,3,4,5]
 # sum=0
-# for i in range(1,n+1):
-#     sum+=i
+# for i in range(len(my_list)):
+#     sum+=my_list[i]
 # print(sum)
 
 
@@ -150,29 +152,29 @@ for i in range(rows,0,-1):
 
 #  armstrong number
 
-# n=int(input("enter the number: "))
-# a=len(str(n))
-# sum=0
-# temp=n
-# while n>0:
-#     num=n%10
-#     num=num**a
-#     sum+=num
-#     n=n//10
-# if temp==sum:
-#     print("is armstrong")
-# else:
-#     print("not armstrong")
-
-
-secret_number=5
-guess=0
-while guess!=secret_number:
-    guess=int(input("enter the number between 1 to 10: "))
-if secret_number==guess:
-    print("right")
+n=int(input("enter the number: "))
+a=len(str(n))
+sum=0
+temp=n
+while n>0:
+    num=n%10
+    num=num**a
+    sum+=num
+    n=n//10
+if temp==sum:
+    print("is armstrong")
 else:
-    print("wrong")
+    print("not armstrong")
+
+
+# secret_number=5
+# guess=0
+# while guess!=secret_number:
+#     guess=int(input("enter the number between 1 to 10: "))
+# if secret_number==guess:
+#     print("right")
+# else:
+#     print("wrong")
 
 
 # num=5

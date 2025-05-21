@@ -43,8 +43,8 @@
 # odd=[x for x in range(0,10) if x%2!=0]
 # print(even,odd)
 
-prime=[x for x in range(2,10)  if all(x%j!=0 for j in range(2,x))]
-print(" prime numbers", prime)
+# prime=[x for x in range(2,10)  if all(x%j!=0 for j in range(2,x))]
+# print(" prime numbers", prime)
 
 # def fibanoic():
 #     num=[n , a:=0 , b:=1 for i in range(0,10) (sum=a+b a=b b=sum)]
