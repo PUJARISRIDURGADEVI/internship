@@ -5,24 +5,24 @@
 #     return True
 # sucessfully()
 
-# def cal(a,b):
-#     c=a+b
-#     d=a-b
-#     return c,d
-# a=int(input("enter the first number: "))
-# b=int(input("enter the second number: "))
-# print(cal(a,b))
+def cal(a,b):
+    c=a+b
+    d=a-b
+    return c,d
+a=int(input("enter the first number: "))
+b=int(input("enter the second number: "))
+print(cal(a,b))
 
-# def cal1(a,b):
-#     if a<b:
-#         return a+b 
-#     elif a==b:
-#         return a*b
-#     else:
-#         return a-b
-# a=int(input("enter the first number: "))
-# b=int(input("enter the second number: "))
-# print(cal1(a,b))
+def cal1(a,b):
+    if a<b:
+        return a+b 
+    elif a==b:
+        return a*b
+    else:
+        return a-b
+a=int(input("enter the first number: "))
+b=int(input("enter the second number: "))
+print(cal1(a,b))
 
 
 # ass ---->1

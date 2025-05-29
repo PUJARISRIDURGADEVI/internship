@@ -98,5 +98,31 @@
 # print(num())
 
 
-my_list=[1,2,3,4,5,6,7,8,9,10]
-prime=fil
+# PALINDROME
+# def palindrome(): 
+#     n=int(input("enter a number:"))
+#     temp=n
+#     rev=0
+#     while n>0:
+#         digit=n%10
+#         rev=rev*10+digit
+#         n=n//10
+#     if temp==rev:
+#         print("palindrome")
+#     else:
+#         print("not palindrome") 
+
+
+
+x=[[2, 3, 4],
+ [5, 6, 7],
+  [8, 9, 10]]
+y=[[1, 2, 3],
+ [4, 5, 6],
+  [7, 8, 9]]
+print(x)
+print(y)
+for i in range(len(x)):
+    for j in range(len(x[i])):
+        print(f"{x[i][j] + y[i][j]:4}",end='')
+    print()
