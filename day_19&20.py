@@ -52,50 +52,50 @@
 # bank.with_draw(500)
 # bank.display_report()
 
-# class Animal:
-#     def make_sound(self):
-#         print("some generic animal sound")
-# class lion(Animal):
-#     def make_sound(self):
-#         print("roar")
-# class  elephant(Animal):
-#     def make_sound(self):
-#         print("trumpet")
-# class  monkey(Animal):
-#     def make_sound(self):
-#         print("chatter")
-# for Animal in [lion(), elephant(), monkey()]:
-#     Animal.make_sound()
+class Animal:
+    def make_sound(self):
+        print("some generic animal sound")
+class lion(Animal):
+    def make_sound(self):
+        print("roar")
+class  elephant(Animal):
+    def make_sound(self):
+        print("trumpet")
+class  monkey(Animal):
+    def make_sound(self):
+        print("chatter")
+for Animal in [lion(), elephant(), monkey()]:
+    Animal.make_sound()
 
 
-class Shape:
-    def area(self):
-        pass
-class Class(Shape):
-    def area(self):
-        print("area of circle = π × r²")
-class Rectangle(Shape):
-    def area(self):
-        print("area of rectangle = l × b")
-class triangle(Shape):
-    def area(self):
-        print("area of triangle = 1/2 × b × h")
-for shape in [Class(), Rectangle(), triangle()]:
-    shape.area()
+# class Shape:
+#     def area(self):
+#         pass
+# class Class(Shape):
+#     def area(self):
+#         print("area of circle = π × r²")
+# class Rectangle(Shape):
+#     def area(self):
+#         print("area of rectangle = l × b")
+# class triangle(Shape):
+#     def area(self):
+#         print("area of triangle = 1/2 × b × h")
+# for shape in [Class(), Rectangle(), triangle()]:
+#     shape.area()
 
-class Creature:
-    def attack(self):
-        print("attacks")
-class  Archer(Creature):
-    def attack(self):
-        print( "shoots an arrow")
-class  knight(Creature):
-    def attack(self):
-        print("swings a sword")
-class Mage(Creature):
-    def attack(self):
-        print("casts a spell")
-for Creature in [Archer(), knight(), Mage()]:
-    Creature.attack()
+# class Game:
+#     def attack(self):
+#         print("attacks")
+# class  Archer(Game):
+#     def attack(self):
+#         print( "shoots an arrow")
+# class  knight(Game):
+#     def attack(self):
+#         print("swings a sword")
+# class Mage(Game):
+#     def attack(self):
+#         print("casts a spell")
+# for Game in [Archer(), knight(), Mage()]:
+#     Game.attack()
 
 

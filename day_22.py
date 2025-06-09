@@ -33,8 +33,12 @@
 # even_num=list(filter(lambda x:x %2 ==0,squares))
 # print(even_num)
 
-from functools import reduce
-my_list=[1,3,5,8,9]
-max_num=reduce(lambda x,y :x if x>y else y,my_list)
-print(max_num)
+# from functools import reduce
+# my_list=[1,3,5,8,9]
+# max_num=reduce(lambda x,y :x if x>y else y,my_list)
+# print(max_num)
 
+# a=int(input("enter a number: "))
+# b=int(input("enter a number: "))
+# operation=input("enter a operation: +, -, *, /: ")
+# calculator={: lambda a,b:a+b,}
