@@ -40,6 +40,7 @@ def calculator():
         print("the division of ",a/b)
     else:
         print("invalid operator")
+    return  calculator()
 calculator()
 
 # king=input("king enter into the (forest/lake): ")
