@@ -1,15 +1,19 @@
 from flask import Flask, render_template, request
 import joblib
-import json
+import sqlite3
 
 # Load model and vectorizer
 vectorizer, model = joblib.load("mood_model.pkl")
 
-# Load quotes
-with open("quote.json", "r") as f:
-    quotes = json.load(f)
-
 app = Flask(__name__)
+
+def get_quote_by_mood(mood):
+    conn = sqlite3.connect("quotes.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT text FROM quotes WHERE mood = ? LIMIT 1", (mood,))
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result else "No quote found for this mood."
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -20,11 +24,8 @@ def index():
         X = vectorizer.transform([user_input])
         mood = model.predict(X)[0]
 
-        # Find first matching quote
-        for q in quotes:
-            if q["mood"] == mood:
-                quote = q["text"]
-                break
+        # Fetch quote from database
+        quote = get_quote_by_mood(mood)
 
     return render_template("index.html", quote=quote, mood=mood)
 
