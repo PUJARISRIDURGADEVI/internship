@@ -1,33 +1,33 @@
 from flask import Flask, render_template, request
-import joblib
 import sqlite3
+import joblib
 
-# Load model and vectorizer
+app = Flask(__name__, template_folder='templates')  # <=== specify templates folder
+
+
+# Load ML model and vectorizer
 vectorizer, model = joblib.load("mood_model.pkl")
 
-app = Flask(__name__)
-
-def get_quote_by_mood(mood):
+def get_quotes_by_mood(mood):
     conn = sqlite3.connect("quotes.db")
     cursor = conn.cursor()
-    cursor.execute("SELECT text FROM quotes WHERE mood = ? LIMIT 1", (mood,))
-    result = cursor.fetchone()
+    cursor.execute("SELECT quote, author FROM quotes WHERE mood = ?", (mood,))
+    results = cursor.fetchall()
     conn.close()
-    return result[0] if result else "No quote found for this mood."
+    return results
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    quote = ""
     mood = ""
+    quotes = []
     if request.method == "POST":
-        user_input = request.form["mood"]
-        X = vectorizer.transform([user_input])
-        mood = model.predict(X)[0]
+        user_input = request.form["text"]
 
-        # Fetch quote from database
-        quote = get_quote_by_mood(mood)
+    # Instead of prediction, just use direct mood input
+        mood = user_input.lower().strip()
+        quotes = get_quotes_by_mood(mood)
 
-    return render_template("index.html", quote=quote, mood=mood)
+    return render_template("index.html", mood=mood, quotes=quotes)
 
 if __name__ == "__main__":
     app.run(debug=True)

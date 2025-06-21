@@ -36,6 +36,13 @@ print(my_tuple)
 print(my_tuple.c ount(20))
 
 
+my_list=[1,2,3,4,5]
+sum=0
+for i in range(len(my_list)):
+    sum+=my_list[i]
+print(sum)
+
+
 l=[]
 list_cout=int(input("enter the number of elements: "))
 for i in range(list_count):
