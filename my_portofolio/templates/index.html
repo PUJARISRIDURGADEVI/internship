@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Picture" class="profile">
+        <h2>Hi, I'm [Sri Durga Devi Pujari]</h2>
+        <p>I am an aspiring software developer with a passion for building clean and functional web applications using Python, Flask, and modern tools.</p>
+    </div>
+
+    <footer>&copy; 2025 Devi Pujari</footer>
+</body>
+</html>
