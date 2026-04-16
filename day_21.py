@@ -12,9 +12,6 @@ my_list=[2,4,6,8]
 square=list( map(lambda x:x**2, my_list))
 print(square)
 
-# num=[5, 12, 17, 18, 24, 33]
-# even=list(filter(lambda x:x%2==0,num))
-# print(even)
 
 # from functools import reduce
 # num=[1, 2, 3, 4, 5]
