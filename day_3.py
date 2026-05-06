@@ -15,7 +15,6 @@ if a>b:
 else:
      print("the largest number is ",b)
 
-
 x=int(input("enter the number:"))
 y=int(input("enter the number:"))
 z=int(input("enter the number:"))
@@ -30,7 +29,7 @@ def calculator():
     a=int(input("enter the number: "))
     b=int(input("enter the number: "))
     c=input("enter the operator: ")
-    if c=="+":
+    if c=="*":
         print("the sum of ",a+b)
     elif c=="-":    
         print("the difference of ",a-b)
