@@ -9,4 +9,4 @@ print("write whatever you want in quotes only")
 
 # input statements
 a=input("write a number")
-
+b=input("write a alphabet")
