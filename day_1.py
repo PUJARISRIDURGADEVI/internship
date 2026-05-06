@@ -7,6 +7,11 @@
 
 
 
+<<<<<<< HEAD
+# input statements
+a=input("write a number")
+b=input("write a alphabet")
+=======
 # # input statements
 # a=input("write a number")
 
@@ -81,3 +86,4 @@ def non_repeated_chr(str):
     return none
 str="abcdafbdsfdfg"
 print(non_repeated_chr(str))
+>>>>>>> 6f7cd761f5911cb1c76a65068848f46a96663f04
